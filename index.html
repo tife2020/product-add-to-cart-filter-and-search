@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="../../fontawesome-free-6.0.0-web/css/all.css" rel="stylesheet"> -->
+    <script src="https://kit.fontawesome.com/b5d68417cd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/addtoCartSearchFilter.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        </style>
+    <title>Price Filter, Search and Add to Cart</title>
+</head>
+
+<body>
+    <nav>
+        <input type="search" name="search" id="searchBar" placeholder="search products...">
+        <p class="category">Categories</p>
+        <!-- Cart Icon-->
+        <div class="carticonsp">
+            <img class="fa-cart-shopping" id="carticon" src="images/cart-73-64.png" alt="">
+            <span>$<p id="sumPrice">0</p></span>
+        </div>
+    </nav>
+
+    <div class="categories hide">
+        <p class="cat">All</p>
+        <p class="cat">Featured</p>
+        <p class="cat">Motivational</p>
+        <p class="cat">Finance</p>
+    </div>
+
+    <div class="cartcont hide">
+        <div class="cart">
+            <div class="cancel">
+                <div class="wrapper"><img class="fa-xmark" src="images/pngaaa.com-28984.png" alt=""> </div>
+            </div>
+
+            <!-- Cart contents -->
+            <div class="productInCart">
+
+                <ul id="buyItems">
+                    <!-- unhide empty if cart is empty -->
+                    <h4 class="empty">Your shopping cart is empty</h4>
+
+           
+                    <!-- html to be return with string literals at appropriate places -->
+                    <!-- <li class="buyItem">
+                        <img src="cd.png">
+                        <div>
+                            <h5>Products Name</h5>
+                            <span class="dollar">$<p>199</p></span>
+                            <div>
+                                <button data-id = "1" class="minusBtn">-</button>
+                                <span class="countOfProduct">1</span>
+                                <button data-id = "1" class="plusBtn">+</button>
+                            </div>
+                        </div>
+                    </li>
+                    <hr> -->
+                    <!-- to be returned end -->
+                </ul>
+
+                <!-- display checkout if cart isnt empty-->
+                <button class="clearCartBtn checkout hide">Clear cart</button>
+                <button class="checkoutbtn checkout hide">Check out</button>
+            </div>
+        </div>
+    </div>
+
+    <h1><span class="header">Products</span></h1>
+
+
+    <div class="sort">
+        <p>Sort: </p>
+        <ul>
+            <li class="filter all">All Products</li>
+            <li class="filter low">lowest - Highest Price</li>
+            <li class="filter high">Highest - lowest Price</li>
+        </ul>
+    </div>
+    
+    <div class="container productsCont">
+        <div class="products motivational featured">
+            <img src="images/ani-kolleshi-4qcvRJCERBU-unsplash.jpg" alt="">
+            <p class="productName" on>Just Shut Up - Do It.</p>
+            <hr>
+            <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, culpa.</p>
+            <hr>
+            <span>$<p class="productPrice">20</p></span>
+            <button class="addToCart" data-product-id ="1">Add to Cart</button>
+        </div>
+        <div class="products finance featured">
+            <img src="images/cd.png" alt="">
+            <p class="productName">Every Candle Stick Pattern Statistics</p>
+            <hr>
+            <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, culpa.</p>
+            <hr>
+            <span>$<p class="productPrice">25</p></span>
+            <button class="addToCart" data-product-id ="2">Add to Cart</button>
+        </div>
+        <div class="products motivational featured">
+            <img src="images/charlesduhigg.jpg" alt="">
+            <p class="productName">The Power of Habit</p>
+            <hr>
+            <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, culpa.</p>
+            <hr>
+            <span>$<p class="productPrice">30</p></span>
+            <button class="addToCart" data-product-id ="3">Add to Cart</button>
+        </div>
+        <div class="products finance">
+            <img src="images/mattRidley.jpg" alt="">
+            <p class="productName">How Innovation works</p>
+            <hr>
+            <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, culpa.</p>
+            <hr>
+            <span>$<p class="productPrice">15</p></span>
+            <button class="addToCart" data-product-id ="4">Add to Cart</button>
+        </div>
+
+
+        <div class="products motivational featured">
+            <img src="images/ani-kolleshi-4qcvRJCERBU-unsplash.jpg" alt="">
+            <p class="productName" on>Just Shut Up - Do It.</p>
+            <hr>
+            <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, culpa.</p>
+            <hr>
+            <span>$<p class="productPrice">20</p></span>
+            <button class="addToCart" data-product-id ="5">Add to Cart</button>
+        </div>
+        <div class="products finance featured">
+            <img src="images/cd.png" alt="">
+            <p class="productName">Every Candle Stick Pattern Statistics</p>
+            <hr>
+            <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, culpa.</p>
+            <hr>
+            <span>$<p class="productPrice">25</p></span>
+            <button class="addToCart" data-product-id ="6">Add to Cart</button>
+        </div>
+        <div class="products motivational featured">
+            <img src="images/charlesduhigg.jpg" alt="">
+            <p class="productName">The Power of Habit</p>
+            <hr>
+            <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, culpa.</p>
+            <hr>
+            <span>$<p class="productPrice">30</p></span>
+            <button class="addToCart" data-product-id ="7">Add to Cart</button>
+        </div>
+        <div class="products finance">
+            <img src="images/mattRidley.jpg" alt="">
+            <p class="productName">How Innovation works</p>
+            <hr>
+            <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, culpa.</p>
+            <hr>
+            <span>$<p class="productPrice">15</p></span>
+            <button class="addToCart" data-product-id ="8">Add to Cart</button>
+        </div>
+    </div>
+
+    
+    <script src="js/filter.js"></script>
+    <script src="js/script.js"></script>
+    
+    <!-- <script src="js/search.js"></script> -->
+    <!-- <script src="js/addtocart.js"></script> -->
+    <!-- <script src="js/category.js"></script> -->
+</body>
+
+</html>
